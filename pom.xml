@@ -12,11 +12,13 @@
     <artifactId>sky-take-out</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+<!--    模块聚合-->
     <modules>
         <module>sky-common</module>
         <module>sky-pojo</module>
         <module>sky-server</module>
     </modules>
+<!--    版本仲裁-->
     <properties>
         <mybatis.spring>2.2.0</mybatis.spring>
         <lombok>1.18.20</lombok>

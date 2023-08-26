@@ -104,7 +104,7 @@ public class DishServiceImpl implements DishService {
     }
 
     /**
-     * 根据id查询菜品和对于的口味数据
+     * 根据id查询菜品和菜品的口味数据
      * @param id
      * @return
      */
@@ -172,5 +172,19 @@ public class DishServiceImpl implements DishService {
                 }
             }
         }
+    }
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    @Override
+    public List<Dish> list(Long categoryId) {
+        Dish dish = Dish.builder()
+                .categoryId(categoryId)
+                .status(StatusConstant.ENABLE)
+                .build();
+        return dishMapper.list(dish);
     }
 }

@@ -11,6 +11,8 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.PrintStream;
 import java.util.List;
 
 /**
@@ -90,7 +92,7 @@ public class CategoryController {
     }
 
     /**
-     * 根据类型查询分类
+     * 根据类型(id)查询分类
      * @param type
      * @return
      */
